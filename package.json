@@ -1,0 +1,21 @@
+{
+  "name": "elastisearch-playground",
+  "version": "0.1.0",
+  "description": "Nothing here. Go away",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fititnt/elastisearch-playground.git"
+  },
+  "author": "Emerson Rocha Luiz",
+  "license": "Public Domain",
+  "bugs": {
+    "url": "https://github.com/fititnt/elastisearch-playground/issues"
+  },
+  "dependencies": {
+    "elasticsearch": "~5.0.0"
+  }
+}
