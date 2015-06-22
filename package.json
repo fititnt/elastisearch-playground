@@ -16,6 +16,8 @@
     "url": "https://github.com/fititnt/elastisearch-playground/issues"
   },
   "dependencies": {
-    "elasticsearch": "~5.0.0"
+    "elasticsearch": "~5.0.0",
+    "csv": "~0.4.5",
+    "csv-parse": "~0.1.3"
   }
 }
