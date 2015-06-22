@@ -1,3 +1,10 @@
+/**
+ * Checa apenas coneccao com Elasticsearch. Veja outros arquivos
+ *
+ * @license       Public Domain
+ * @author        Emerson Rocha Luiz <emerson@alligo.com.br>
+ */
+
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
   host: 'localhost:9200',
@@ -11,8 +18,8 @@ client.ping({
   hello: "elasticsearch!"
 }, function (error) {
   if (error) {
-    console.trace('elasticsearch cluster is down!');
+    console.trace('Seu Elasticsearch está desligado. Resolva isso antes de começar');
   } else {
-    console.log('All is well');
+    console.log('Elasticsearch está ligado');
   }
 });

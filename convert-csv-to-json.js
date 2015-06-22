@@ -1,3 +1,11 @@
+/**
+ * Converte ./data/municipios.csv para um arquivo que pode ser importado em
+ * em batelada com Elasticsearch
+ *
+ * @license       Public Domain
+ * @author        Emerson Rocha Luiz <emerson@alligo.com.br>
+ */
+
 var csv = require('csv');
 var fs = require('fs');
 var parse = require('csv-parse');
@@ -14,8 +22,17 @@ parse(contents, {comment: '#', delimiter: "\t"}, function (err, output) {
   }
   //console.log(output);
   if (output && output.length) {
+    file_output = '';
     for (var i = 1; i < output.length; ++i) {
-      municipios.push({
+      file_output += JSON.stringify({
+        create: {
+          _index: "brasil",
+          _type: "municipio",
+          _id: parseInt(output[i][1], 10)
+        }
+      });
+      file_output += "\n";
+      file_output += JSON.stringify({
         geocodigo: parseInt(output[i][1], 10),
         nome: output[i][2],
         uf: output[i][3],
@@ -27,8 +44,9 @@ parse(contents, {comment: '#', delimiter: "\t"}, function (err, output) {
           lon: parseFloat(output[i][8].replace(',', '.'))
         }
       });
+      file_output += "\n";
     }
     //console.log(municipios);
-    fs.writeFileSync('./data/municipios.json', JSON.stringify(municipios));
+    fs.writeFileSync('./data/municipios_elasticsearch.json', file_output);
   }
 });
