@@ -11,6 +11,9 @@ var client = new elasticsearch.Client({
   log: 'trace'
 });
 
+/**
+ * Testa se o servidor está ligado
+ */
 client.ping({
   // ping usually has a 3000ms timeout
   requestTimeout: Infinity,
@@ -22,4 +25,32 @@ client.ping({
   } else {
     console.log('Elasticsearch está ligado');
   }
+});
+
+/**
+ * Procura cidades a 20km de distancia de um ponto (relativo a cidade de Porto Alegre)
+ * Exemplo de comando equivalente em cURL e resultado pode ser visto em ./queries/
+ */
+client.search({
+  index: 'brasil',
+  type: 'municipio',
+  body: {
+    "query": {
+      "filtered": {
+        "filter": {
+          "geo_distance": {
+            "distance": "20km",
+            "location": {
+              "lat": -30.033,
+              "lon": -51.23
+            }
+          }
+        }
+      }
+    }
+  }
+}).then(function (resp) {
+  console.log(resp);
+}, function (err) {
+  console.trace(err.message);
 });

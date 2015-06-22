@@ -1,5 +1,5 @@
-# elastisearch-playground
-Prova de conceito com Elasticsearch + NodeJS + curl.
+# Elastisearch Playground
+Prova de conceito com Elasticsearch + NodeJS + cURL.
 Atualmente é util como prova de conceito de converter de uma base de dados 
 tradicional e importar em uma base NoSQL, o Elasticsearch.
 
@@ -21,3 +21,9 @@ http://fititnt.github.io/gis-dataset-brasil/
 Se nada deu errado, você deve ter em seu Elasticsearch 5566 documentos de
 cada município brasileiro. Pode usar esses scripts de conversão de dados
 como referência para fazer algo funcional em seu projeto
+
+## Imagens
+
+Exemplod e busca por 'Porto Alegre' no Elastisearch já alimentado por conteúdo de exemplo. Usa cliente Postman
+
+![Alt text](https://cloud.githubusercontent.com/assets/812299/8275248/dfbdf99c-1877-11e5-9788-7f25c32af1e6.png "Exemplod e busca por 'Porto Alegre' no Elastisearch já alimentado por conteúdo de exemplo. Usa cliente Postman")

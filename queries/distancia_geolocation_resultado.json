@@ -1,0 +1,50 @@
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 6,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "brasil",
+      "_type" : "municipio",
+      "_id" : "4307708",
+      "_score" : 1.0,
+      "_source":{"geocodigo":4307708,"nome":"Esteio","uf":"RS","regiao":"Sul","mesoregiao":"METROPOLITANA DE PORTO ALEGRE","microregiao":"PORTO ALEGRE","location":{"lat":-29.861,"lon":-51.179}}
+    }, {
+      "_index" : "brasil",
+      "_type" : "municipio",
+      "_id" : "4314902",
+      "_score" : 1.0,
+      "_source":{"geocodigo":4314902,"nome":"Porto Alegre","uf":"RS","regiao":"Sul","mesoregiao":"METROPOLITANA DE PORTO ALEGRE","microregiao":"PORTO ALEGRE","location":{"lat":-30.033,"lon":-51.23}}
+    }, {
+      "_index" : "brasil",
+      "_type" : "municipio",
+      "_id" : "4309308",
+      "_score" : 1.0,
+      "_source":{"geocodigo":4309308,"nome":"Gua","uf":"RS","regiao":"Sul","mesoregiao":"METROPOLITANA DE PORTO ALEGRE","microregiao":"PORTO ALEGRE","location":{"lat":-30.114,"lon":-51.325}}
+    }, {
+      "_index" : "brasil",
+      "_type" : "municipio",
+      "_id" : "4304606",
+      "_score" : 1.0,
+      "_source":{"geocodigo":4304606,"nome":"Canoas","uf":"RS","regiao":"Sul","mesoregiao":"METROPOLITANA DE PORTO ALEGRE","microregiao":"PORTO ALEGRE","location":{"lat":-29.918,"lon":-51.184}}
+    }, {
+      "_index" : "brasil",
+      "_type" : "municipio",
+      "_id" : "4303103",
+      "_score" : 1.0,
+      "_source":{"geocodigo":4303103,"nome":"Cachoeirinha","uf":"RS","regiao":"Sul","mesoregiao":"METROPOLITANA DE PORTO ALEGRE","microregiao":"PORTO ALEGRE","location":{"lat":-29.951,"lon":-51.094}}
+    }, {
+      "_index" : "brasil",
+      "_type" : "municipio",
+      "_id" : "4300604",
+      "_score" : 1.0,
+      "_source":{"geocodigo":4300604,"nome":"Alvorada","uf":"RS","regiao":"Sul","mesoregiao":"METROPOLITANA DE PORTO ALEGRE","microregiao":"PORTO ALEGRE","location":{"lat":-29.99,"lon":-51.084}}
+    } ]
+  }
+}
