@@ -1,0 +1,13 @@
+{
+    "municipio" : {
+        "properties" : {
+            "geocodigo" : {"type" : "integer"},
+            "nome" : {"type" : "string"},
+            "uf" : {"type" : "string"},
+            "regiao" : {"type" : "string"},
+            "mesoregiao" : {"type" : "string"},
+            "microregiao" : {"type" : "string"},
+            "location" : {"type" : "geo_point"}
+        }
+    }
+}

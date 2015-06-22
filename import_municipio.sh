@@ -1,0 +1,1 @@
+curl -XPOST 'localhost:9200/brasil/municipio' -d @./data/municipios.json
